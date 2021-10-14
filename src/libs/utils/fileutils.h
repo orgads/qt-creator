@@ -29,6 +29,7 @@
 
 #include "filepath.h"
 #include "hostosinfo.h"
+#include "porting.h"
 
 #include <QCoreApplication>
 #include <QDir>
@@ -316,7 +317,7 @@ private:
 
 QTCREATOR_UTILS_EXPORT QTextStream &operator<<(QTextStream &s, const FilePath &fn);
 
-inline uint qHash(const Utils::FilePath &a, uint seed = 0) { return a.hash(seed); }
+inline QHashValueType qHash(const Utils::FilePath &a, uint seed = 0) { return a.hash(seed); }
 
 } // namespace Utils
 

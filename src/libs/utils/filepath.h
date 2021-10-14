@@ -26,6 +26,7 @@
 #pragma once
 
 #include "utils_global.h"
+#include "porting.h"
 
 #include "hostosinfo.h"
 
@@ -140,7 +141,7 @@ public:
     void clear();
     bool isEmpty() const;
 
-    uint hash(uint seed) const;
+    QHashValueType hash(uint seed) const;
 
     [[nodiscard]] FilePath resolvePath(const FilePath &tail) const;
     [[nodiscard]] FilePath resolvePath(const QString &tail) const;

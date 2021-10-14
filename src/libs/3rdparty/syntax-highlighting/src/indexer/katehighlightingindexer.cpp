@@ -284,7 +284,7 @@ private:
 
                 friend uint qHash(const Item &item, uint seed = 0)
                 {
-                    return qHash(item.content, seed);
+                    return uint(qHash(item.content, seed));
                 }
 
                 friend bool operator==(const Item &item0, const Item &item1)
@@ -650,7 +650,7 @@ private:
 
             friend uint qHash(const Style &style, uint seed = 0)
             {
-                return qHash(style.name, seed);
+                return uint(qHash(style.name, seed));
             }
 
             friend bool operator==(const Style &style0, const Style &style1)
